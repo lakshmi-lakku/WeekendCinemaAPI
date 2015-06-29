@@ -1,0 +1,27 @@
+
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "Weekend Cinema REST API",
+  "author": "Ganesh Karamala",
+  "contributors": [{
+  "name": "",
+  "email": ""
+}],
+  "main": "server.js",
+  "repository": {
+  "type": "git",
+  "url": ""
+},
+  "dependencies": {
+    "express": "~4.x",
+    "mongodb": "~1.4.34",
+	"body-parser":"~1.5.2"
+  },
+  "preferGlobal": true,
+  "private": true,
+  "publishConfig": {
+  "registry": ""
+},
+  "license": "unlicensed"
+}
