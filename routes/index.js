@@ -4,6 +4,6 @@ module.exports = exports = function(app,db) {
 
 var contentHandler = new ContentHandler(db);
 
- app.get("/getData/movie/:name", contentHandler.getCinema);
+ app.get("/getData/cinema/:name", contentHandler.getCinema);
 
 }
