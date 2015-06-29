@@ -14,7 +14,7 @@ function CinemaDAO(db) {
 	this.getCinema = function( name, callback) {
         "use strict";
 	
-		var query = { 'ln-en.name': name };
+		var query = { 'ln_en.name': name };
         cinema.findOne(query,function(err, cinemaDetails) {
             "use strict";	
             if (err) 
