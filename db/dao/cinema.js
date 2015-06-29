@@ -9,18 +9,17 @@ function CinemaDAO(db) {
         return new CinemaDAO(db);
     }
 
-    var movie = db.collection("movie");
+    var cinema = db.collection("cinema");
 	
-	this.getMovie = function( name, callback) {
+	this.getCinema = function( name, callback) {
         "use strict";
-
-		var query = { 'name':'Mosagallaku Mosagadu'};
-        movie.findOne(query,function(err, movieDetails) {
-            "use strict";
-			
+	
+		var query = { 'ln-en.name': name };
+        cinema.findOne(query,function(err, cinemaDetails) {
+            "use strict";	
             if (err) 
-			   return callback(err, null);
-            callback(err, movieDetails);
+			   return callback(err, '{}');
+            callback(err, cinemaDetails);
         });
     }
 

@@ -4,7 +4,7 @@ var express = require('express')
   , routes = require(__dirname+'/routes') // Routes for our application
   , config = require(__dirname+'/config.json');// for loading configuration file
 	
-	MongoClient.connect('mongodb://localhost:27017/WkendMovies', function(err, db) {
+	MongoClient.connect('mongodb://wc:wc@ds045027.mongolab.com:45027/weekendcinema', function(err, db) {
     "use strict";
     if(err) throw err;
 	
