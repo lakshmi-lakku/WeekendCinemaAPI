@@ -8,7 +8,7 @@ var express = require('express')
   // process.env.PORT lets the port be set by Heroku
   var port = process.env.PORT || 8080;
 	
-	MongoClient.connect('mongodb://wc:wc@ds045027.mongolab.com:45027/weekendcinema', function(err, db) {
+	MongoClient.connect('mongodb://weekendcinema:wc@ds059672.mongolab.com:59672/weekendcinema', function(err, db) {
     "use strict";
     if(err) throw err;
 	
