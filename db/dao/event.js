@@ -27,7 +27,7 @@ function EventDAO(db) {
 	
 	this.getEvents = function(callback) {
         "use strict";
-        event.find().sort({'orgDT':1}).limit(36).toArray(function(err, data) {
+        event.find().sort({'orgDT':-1}).limit(36).toArray(function(err, data) {
             "use strict";
          			
             if (err) 
