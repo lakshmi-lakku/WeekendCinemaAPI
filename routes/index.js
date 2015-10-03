@@ -1,8 +1,12 @@
-var ContentHandler = require('./content');
+var CinemaContentHandler = require('./CinemaContentHandler');
+
+var EventContentHandler = require('./EventContentHandler');
 
 module.exports = exports = function(app,db) {
 
-var contentHandler = new ContentHandler(db);
+var cinemaContentHandler = new CinemaContentHandler(db);
+
+var eventContentHandler = new EventContentHandler(db);
 
 
 app.use(function(req, res, next) {
@@ -11,6 +15,7 @@ app.use(function(req, res, next) {
   next();
 });
 
- app.get("/getData/cinema/:name", contentHandler.getCinema);
+ app.get("/v1/cinema/:name", cinemaContentHandler.getCinema);
 
+ app.get("/v1/events/:date",eventContentHandler.getEventsByDate);
 }
