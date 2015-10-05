@@ -18,4 +18,6 @@ app.use(function(req, res, next) {
  app.get("/v1/cinema/:name", cinemaContentHandler.getCinema);
 
  app.get("/v1/events/:date",eventContentHandler.getEventsByDate);
+ 
+ app.get("/v1/events/",eventContentHandler.getEvents);
 }

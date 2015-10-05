@@ -18,6 +18,15 @@ function EventContentHandler (db) {
 		});
 		
 	}
+	  this.getEvents = function(req,res,next){
+		
+		event.getEventsByDate(function(err,data){
+		 if ( err ) 
+			 throw next(err);
+		 res.json( data );
+		});
+		
+	}
 }
 
 
